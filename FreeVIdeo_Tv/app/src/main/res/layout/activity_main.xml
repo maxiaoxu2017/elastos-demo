@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.freevideo.freevideo_tv.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_rl_video"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible">
+        <VideoView
+            android:id="@+id/main_vv"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <RelativeLayout
+            android:id="@+id/main_rl"
+            android:background="#77333333"
+            android:alpha="120"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/btn_playstatus"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/player_play_ic"/>
+
+            <Button
+                android:id="@+id/btn_tv"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/player_tv_ic"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:text="本demo仅为技术原型验证。\n点击播放器界面TV按钮根据提示操作即可。\n若未绑定设备，或者设备不在线，可以扫码绑定后重试！">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_marginTop="400dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="18sp"
+        android:text="扫码绑定新设备"
+        android:layout_height="50dp" />
+
+    <FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:text="正在缓冲......"/>
+    </FrameLayout>
+
+</FrameLayout>
